@@ -45,16 +45,16 @@ def pred_cot_dieas(cott_plant):
     except Exception as e:
         print(f'@@ Error during prediction: {e}')
         return "Error during prediction", 'error.html'
-    
+
     # Map prediction to output
     if pred == 0:
-        return "Healthy Cotton Plant", 'healthy_plant_leaf.html'
+        return "diseased cotton leaf", 'disease_plant.html'
     elif pred == 1:
         return 'Diseased Cotton Plant', 'disease_plant.html'
     elif pred == 2:
-        return 'Another Condition Detected', 'another_condition.html'  # Customize as per your classes
+        return 'fresh cotton leaf', 'healthy_plant_leaf.html'
     else:
-        return "Unknown class prediction", 'error.html'  # Handle unexpected predictions
+        return "fresh cotton plant", 'healthy_plant.html'
 # Render index.html page
 @app.route("/", methods=['GET', 'POST'])
 def home():
