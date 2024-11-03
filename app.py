@@ -53,8 +53,10 @@ def pred_cot_dieas(cott_plant):
         return 'Diseased Cotton Plant', 'disease_plant.html'
     elif pred == 2:
         return 'fresh cotton leaf', 'healthy_plant_leaf.html'
-    else:
+    elif pred==3:
         return "fresh cotton plant", 'healthy_plant.html'
+    else:
+        return "error.html"
 # Render index.html page
 @app.route("/", methods=['GET', 'POST'])
 def home():
