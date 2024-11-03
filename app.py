@@ -14,7 +14,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Load the model
 try:
-    model = load_model("/workspace/cotton-d/model/v4_1_pred_cott_dis (1).h5")
+    model = load_model("model/v4_1_pred_cott_dis (1).h5")
     print('@@ Model loaded')
 except Exception as e:
     print(f'@@ Error loading model: {e}')
